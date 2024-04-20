@@ -40,5 +40,5 @@ const color = document.querySelector("#color");
 ctx.strokeStyle = color.value
 color.addEventListener("change", ()=> ctx.strokeStyle = color.value);
 
-const clear = document.querySelector('button');
-clear.addEventListener("click", ctx.clearRect(0,0,canvas.width, canvas.height));
+const clear = document.getElementById("clear");
+clear.addEventListener("click", ()=> ctx.clearRect(0,0,canvas.width,canvas.height));
