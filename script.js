@@ -33,4 +33,12 @@ canvas.addEventListener('mouseup', mouseup);
 canvas.addEventListener('mousemove', mousemove);
 
 const tip = document.querySelector('#tip');
+ctx.lineWidth = tip.value;
 tip.addEventListener("change", () => ctx.lineWidth = tip.value);
+
+const color = document.querySelector("#color");
+ctx.strokeStyle = color.value
+color.addEventListener("change", ()=> ctx.strokeStyle = color.value);
+
+const clear = document.querySelector('button');
+clear.addEventListener("click", ctx.clearRect(0,0,canvas.width, canvas.height));
