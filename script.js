@@ -1,0 +1,27 @@
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+canvas.height = 700;
+canvas.width = 700;
+canvas.style.border = "solid black 2px";
+
+var info = document.getElementById("info");
+function tellPos(p){
+    info.innerHTML = "x: " + p.pageX + " y: " + p.pageY; 
+}
+
+function getPos(p){
+    return [p.pageX, p.pageY];
+}
+
+
+
+function dot(p){
+    let x = p.pageX; let y = p.pageY;
+    ctx.beginPath();
+    ctx.arc(x,y,5,0,2*Math.PI);
+    ctx.fill();
+    ctx.stroke();
+}
+
+addEventListener('mousemove', tellPos, false);
+addEventListener('mousedown', dot, false);

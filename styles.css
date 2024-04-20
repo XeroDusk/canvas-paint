@@ -1,5 +1,4 @@
-canvas {
-    height : 700px;
-    width : 700px;
-    border : solid black 2px
+body {
+    padding: 0%;
+    margin: 0%;
 }
