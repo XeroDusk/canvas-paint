@@ -23,5 +23,12 @@ function dot(p){
     ctx.stroke();
 }
 
+function draw(p){
+    let x = p.pageX; let y= p.pagey;
+    addEventListener('mouseup', ()=> {ctx.moveTo(x,y);ctx.lineTo(p.pageX,p.pageY);ctx.stroke();}, false);
+}
+
 addEventListener('mousemove', tellPos, false);
 addEventListener('mousedown', dot, false);
+
+addEventListener('mousedown', draw, false);
